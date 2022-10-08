@@ -1,0 +1,44 @@
+/* utility classes */
+.container {
+    padding: 0 calc(var(--size-800) + var(--size-200));
+    width: 100%;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.jc-items-end {
+    justify-content: flex-end;
+}
+
+.jc-items-center {
+    justify-content: center;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+.padding-bottom-xl-300 {
+    padding-bottom: var(--size-xl-300);
+}
+
+.margin-bottom-500 {
+    margin-bottom: var(--size-500);
+}

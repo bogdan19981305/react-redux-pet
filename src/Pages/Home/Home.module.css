@@ -1,0 +1,12 @@
+.homepage {
+    position: relative;
+    padding-top: var(--size-xl-600);
+}
+
+.homepage__background {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}

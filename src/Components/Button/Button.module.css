@@ -1,0 +1,40 @@
+.button {
+    --default-border-size: 2px;
+
+    cursor: pointer;
+    border-radius: var(--radius-400);
+    transition: var(--transition-400);
+}
+
+.button__color-primary {
+    --color: var(--color-text-100);
+    --button-color: var(--color);
+    --button-color-hover: var(--color);
+    --button-background-hover: var(--color-button-accent);
+    --border-color-hover: transparent;
+
+    background: transparent;
+    color: var(--color);
+}
+
+
+.button__type-solid {
+    border: var(--default-border-size) solid var(--color-button-primary);
+}
+
+.button__type-solid:where(:hover,:focus-within) {
+    background: var(--button-background-hover);
+    color: var(--button-color-hover);
+    border-color: var(--border-color-hover);
+}
+
+.button__size-small {
+    padding: var(--size-300) var(--size-600);
+    font-size: var(--font-size-500);
+    line-height: var(--font-size-600);
+}
+
+.button__size-large {
+    padding: var(--size-700) var(--size-600);
+    font-size: var(--font-size-700);
+}

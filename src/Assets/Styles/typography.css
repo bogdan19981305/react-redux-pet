@@ -1,0 +1,21 @@
+h1,h2,h3 {
+    margin: 0;
+    color: var(--color-text-100);
+}
+
+h1 {
+    margin-bottom: var(--size-400);
+    line-height: var(--size-xl-600);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-xl-900);
+}
+
+h2{
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-800);
+    line-height: var(--font-size-900);
+}
+
+.text-color-800 {
+    color: var(--color-text-800);
+}
