@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     gap: var(--size-500);
+    border: 2px solid transparent;
 }
 
 .item .item__label {
@@ -16,4 +17,12 @@
     gap: var(--size-300);
     display: flex;
     align-items: center;
+}
+
+.item__withError {
+    border-color: var(--color-error-400);
+}
+
+.item__checked {
+    border-color: var(--color-success-400);
 }

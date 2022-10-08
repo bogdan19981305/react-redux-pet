@@ -18,20 +18,25 @@ const Register = () => (
             <h2 className='text-center text-color-400 margin-bottom-xl-300'> <b className='text-color-900 text-weight-400'>Rival</b>CMS</h2>
             <Form
                 className={`${styles.form} align-items-end`}
+                initialValues={{fullName: '',email: '',password: ''}}
             >
                 <Item
                     inputType='text'
                     label='Full name'
+                    name='fullName'
                     icon='user'
+                    required
                 />
                 <Item
                     inputType='text'
                     label='Email address'
+                    name='email'
                     icon='mail'
                 />
                 <Item
                     inputType='text'
                     label='Password'
+                    name='password'
                     icon='lock'
                 />
                 <Button color='accent' size='middle'>Register</Button>

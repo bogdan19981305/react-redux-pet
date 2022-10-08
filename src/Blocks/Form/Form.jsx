@@ -1,47 +1,35 @@
 import React from "react";
 import {Item} from "./common";
 import styles from './Form.module.css';
-import { Form as FormikForm,FormikProvider,useFormik } from 'formik';
+import { Form,Formik } from 'formik';
+import validationSchema from "Validators";
 
-const AuthFormContext = React.createContext(null);
-
-function useFormContext() {
-    const context = React.useContext(AuthFormContext);
-
-    if (!context) {
-        throw new Error('This component must be used within a <Form> component.');
-    }
-
-    return context;
-}
-
-const Form = ({children,onSubmit,initialValues,className,...props}) => {
-
-    const formData = useFormik({
-        initialValues,
-        onSubmit
-    });
-
+const FormComponent = ({
+    children,
+    className,
+    initialValues = {},
+    onSubmit = data => console.log(data),
+    ...props
+}) => {
     return (
-        <FormikProvider value={formData}>
-            <FormikForm
+        <Formik
+            initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}
+            {...props}
+        >
+            <Form
                 className={`
-                ${styles.form}
-                ${className}
-            `}
-                {...props}
+            ${styles.form}
+            ${className}
+        `}
             >
                 {children}
-            </FormikForm>
-        </FormikProvider>
+            </Form>
+        </Formik>
     );
 };
 
-export {
+FormComponent.Item = Item;
 
-}
-
-Form.Item = Item;
-Form.useFormContext = useFormContext;
-
-export default Form;
+export default FormComponent;

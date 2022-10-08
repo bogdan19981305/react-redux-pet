@@ -27,6 +27,10 @@ p {
     color: var(--color-text-800);
 }
 
+.text-error-400 {
+    color: var(--color-error-400);
+}
+
 .text-color-900 {
     color: var(--color-text-900);
 }

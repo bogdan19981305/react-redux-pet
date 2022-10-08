@@ -1,23 +1,29 @@
 import React from "react";
-import {Icon, Input} from "Components";
-import Form from "Blocks/Form";
+import {Icon,Input} from "Components";
 import styles from './Item.module.css';
+import {useField} from "formik";
 
-const Item = ({name,label,icon,inputType,...props}) => {
+const Item = ({label,icon,inputType,...props}) => {
 
-    const ctx = Form.useFormContext();
+    const [field,meta] = useField(props);
+
+    const errorClassName = (meta.error && meta.touched) ? styles['item__withError'] : null;
+    const checkedClassName = (!meta.error && meta.touched) ? styles['item__checked'] : null
 
     const fieldInputStrategy = {
-        text: <Input {...ctx} id={name} name={name} {...props} />
+        text: <Input className={`${errorClassName} ${checkedClassName}`} {...field} />
     }
 
     return (
         <div className={styles.item}>
             <div className={styles.item__withIcon}>
                 {icon && <Icon icon={icon} />}
-                <label className={styles.item__label} htmlFor={name}>{label}</label>
+                <label className={styles.item__label} htmlFor={props.name}>{label}</label>
             </div>
             {fieldInputStrategy[inputType]}
+            {meta.touched && meta.error ? (
+                <p className="text-error-400 text-end">{meta.error}</p>
+            ) : null}
         </div>
     )
 }
