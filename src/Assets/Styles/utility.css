@@ -29,11 +29,26 @@
     justify-content: center;
 }
 
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
 
 .text-center {
     text-align: center;
 }
 
+.gap-400 {
+    gap: var(--size-400);
+}
+
+.gap-800 {
+    gap: var(--size-800);
+}
 
 .padding-bottom-xl-300 {
     padding-bottom: var(--size-xl-300);
@@ -41,4 +56,12 @@
 
 .margin-bottom-500 {
     margin-bottom: var(--size-500);
+}
+
+.margin-bottom-xl-300 {
+    margin-bottom: var(--size-xl-300);
+}
+
+.margin-bottom-xl-500 {
+    margin-bottom: var(--size-xl-500);
 }

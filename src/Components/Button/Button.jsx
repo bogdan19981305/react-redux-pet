@@ -2,7 +2,8 @@ import React from "react";
 import styles from './Button.module.css';
 
 const buttonColorStrategy = {
-    primary: styles['button__color-primary']
+    primary: styles['button__color-primary'],
+    accent: styles['button__color-accent']
 }
 
 const buttonTypeStrategy = {
@@ -11,6 +12,7 @@ const buttonTypeStrategy = {
 
 const buttonSizeStrategy = {
     small: styles['button__size-small'],
+    middle: styles['button__size-middle'],
     large: styles['button__size-large']
 }
 

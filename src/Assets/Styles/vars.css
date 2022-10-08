@@ -1,4 +1,7 @@
 :root {
+
+    --base-rem: 10px;
+
     --font-size-400: 1rem;
     --font-size-500: 1.25rem; /* 20px default */
     --font-size-600: 1.5rem;
@@ -21,6 +24,7 @@
     --size-600: 1.5rem; /* 24px default */
     --size-700: 1.75rem; /* 28px default */
     --size-800: 2rem;
+    --size-900: 2.5rem;
 
     --size-xl-300: 3.125rem;
     --size-xl-400: 5rem;
@@ -29,10 +33,14 @@
 
     /*colors*/
 
+    --color-bg-200: rgba(237, 242, 247, 1);
     --color-bg-500: rgba(66, 153, 225, 1);
+    --color-bg-800: rgba(45, 55, 72, 1);
+    --color-bg-900: rgba(42, 67, 101, 1);
 
     --color-text-100: rgba(247, 250, 252, 1);
     --color-text-200: rgba(255, 252, 254, 1);
+    --color-text-400: rgba(99, 179, 237, 1);
     --color-text-500: rgba(66, 153, 225, 1);
     --color-text-800: rgba(45, 55, 72, 1);
     --color-text-900: rgba(42, 67, 101, 1);
@@ -40,9 +48,20 @@
     --color-button-primary: rgba(247, 250, 252, 1);
     --color-button-accent: rgba(42, 67, 101, 1);
 
+    --link-hover-color: var(--color-text-900);
+    --main-color: rgba(247, 250, 252, 1);
+    --color-white: #FFFFFF;
+
     /* default project transition */
     --transition-400: 0.3s ease;
 
     /* default border radius */
     --radius-400: 5px;
+
+
+
+    /* resolutions */
+
+    --sm: 666px;
+    --mob: 320px
 }

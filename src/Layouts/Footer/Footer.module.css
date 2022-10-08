@@ -1,0 +1,7 @@
+.footer {
+    background: var(--color-bg-900);
+    padding: var(--size-800) 0;
+    margin-top: calc(var(--size-400) * 29.75);
+
+    --link-hover-color: var(--color-text-500);
+}

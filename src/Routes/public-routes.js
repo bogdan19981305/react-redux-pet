@@ -7,7 +7,8 @@ const publicRoutes =  {
     children: [
         {
             path: '/',
-            element: <Home />
+            element: <Home />,
+            index: true
         }
     ]
 };

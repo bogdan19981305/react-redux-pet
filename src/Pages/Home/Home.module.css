@@ -1,12 +1,25 @@
 .homepage {
     position: relative;
     padding-top: var(--size-xl-600);
+    z-index: 2;
 }
 
-.homepage__background {
+.homepage .homepage__background {
     position: absolute;
     width: 100%;
+    height: calc(var(--size-400) * 75);
     z-index: -1;
     top: 0;
     left: 0;
+}
+
+@media screen and (min-width: 666px){
+    .homepage .homepage__background {
+        height: calc(var(--size-400) * 65);
+    }
+}
+
+.homepage .homepage__tableAsset {
+    margin-top: calc(var(--size-xl-500) + (var(--size-300) / 2));
+    max-width: 100%;
 }

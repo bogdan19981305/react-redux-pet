@@ -8,5 +8,5 @@
 }
 
 .link:where(:hover,:focus-within) {
-    color: var(--color-text-900);
+    color: var(--link-hover-color);
 }

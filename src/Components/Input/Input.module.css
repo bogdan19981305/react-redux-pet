@@ -1,0 +1,16 @@
+.input {
+    display: block;
+    background: var(--color-bg-200);
+    font-size: var(--font-size-500);
+    color: var(--color-text-800);
+    padding: var(--size-600) var(--size-800);
+    width: 100%;
+    border-radius: var(--radius-400);
+    border: 2px solid transparent;
+    transition: var(--transition-400);
+}
+
+.input:where(:focus,:focus-within,:focus-visible) {
+    border-color: var(--color-bg-500);
+    outline: none;
+}

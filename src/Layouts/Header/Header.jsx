@@ -1,9 +1,18 @@
 import React from "react";
 import styles from './Header.module.css';
 
-const Header = ({children,className = '',...props}) => (
+const headerColorStrategy = {
+    transparent: styles['header__color-transparent'],
+    primary: styles['header__color-primary'],
+}
+
+const Header = ({children,color='transparent',className = '',...props}) => (
     <header
-        className={`${styles.header} ${className}`}
+        className={`
+            ${styles.header}
+            ${headerColorStrategy[color]}
+            ${className}
+             `}
         {...props}
     >
         {children}

@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--size-500);
+}
+
+.item .item__label {
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-400);
+    line-height: var(--font-size-600);
+    color: var(--color-text-900);
+}
+
+.item .item__withIcon {
+    gap: var(--size-300);
+    display: flex;
+    align-items: center;
+}

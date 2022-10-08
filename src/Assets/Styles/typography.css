@@ -1,4 +1,4 @@
-h1,h2,h3 {
+h1,h2,h3,p {
     margin: 0;
     color: var(--color-text-100);
 }
@@ -16,6 +16,25 @@ h2{
     line-height: var(--font-size-900);
 }
 
+p {
+    --font-size : calc(var(--font-size-500) - (var(--font-size-500) / 4));
+    font-weight: var(--font-weight-400);
+    font-size: calc(var(--font-size-500) - (var(--font-size-500) / 4));
+    line-height: calc(var(--font-size) + (var(--font-size) / 5));
+}
+
 .text-color-800 {
     color: var(--color-text-800);
+}
+
+.text-color-900 {
+    color: var(--color-text-900);
+}
+
+.text-weight-400 {
+    font-weight: var(--font-weight-400);
+}
+
+.text-color-400 {
+    color: var(--color-text-400);
 }

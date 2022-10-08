@@ -1,5 +1,13 @@
 .header {
-    padding: var(--size-800) calc(var(--size-800) + var(--size-200));
+    padding: var(--size-500) calc(var(--size-800) + var(--size-200));
     gap: var(--size-xl-400);
+    width: 100vw;
+}
+
+.header__color-transparent{
     background: var(--color-bg-500);
+}
+
+.header__color-primary{
+    background: var(--color-bg-800);
 }

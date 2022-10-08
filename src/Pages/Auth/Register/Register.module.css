@@ -1,0 +1,7 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(var(--size-400) * 32);
+    gap: var(--size-500);
+}

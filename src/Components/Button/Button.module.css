@@ -4,6 +4,7 @@
     cursor: pointer;
     border-radius: var(--radius-400);
     transition: var(--transition-400);
+    width: fit-content;
 }
 
 .button__color-primary {
@@ -15,6 +16,11 @@
 
     background: transparent;
     color: var(--color);
+}
+
+.button__color-accent {
+    background: var(--color-button-accent);
+    color: var(--color-text-100);
 }
 
 
@@ -31,6 +37,12 @@
 .button__size-small {
     padding: var(--size-300) var(--size-600);
     font-size: var(--font-size-500);
+    line-height: var(--font-size-600);
+}
+
+.button__size-middle {
+    padding: var(--size-400) calc(var(--size-xl-400) - var(--size-600));
+    font-size: var(--size-600);
     line-height: var(--font-size-600);
 }
 
