@@ -4,7 +4,6 @@ import {useSelector} from "react-redux";
 
 const Auth = () => {
     const currentUser = useSelector(({auth}) => auth.currentUser);
-
     if(currentUser) return <Navigate to='/admin/view-site' />
 
     return (

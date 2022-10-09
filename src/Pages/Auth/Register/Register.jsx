@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "Layouts/Header";
+import Header from "Layouts/common/Header";
 import {Button, Link, Logo} from "Components";
 import Form from "Blocks/Form";
 import styles from '../Auth.module.css';

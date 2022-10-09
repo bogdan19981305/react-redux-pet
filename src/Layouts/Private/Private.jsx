@@ -1,7 +1,7 @@
 import {Button, Link, Logo,User} from "Components";
-import Aside from "../Aside";
+import Aside from "../common/Aside";
 import {Navigate, Outlet} from "react-router-dom";
-import Header from "../Header";
+import Header from "Layouts/common/Header";
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {authActions} from "Redux/actions";

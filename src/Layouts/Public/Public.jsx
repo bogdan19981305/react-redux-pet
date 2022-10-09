@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from 'Layouts/Header';
-import Footer from "Layouts/Footer";
+import Header from 'Layouts/common/Header';
+import Footer from "Layouts/common/Footer";
 import {Button,Link} from "Components";
 
 const Public = () => (
