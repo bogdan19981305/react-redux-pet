@@ -1,17 +1,35 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
 .notification {
-    max-width: 430px;
-    max-height: 200px;
+    max-width: calc(var(--size-300) * 43);
     overflow: hidden;
-    padding: 14px 48px 12px 12px;
+    padding: var(--size-400) calc(var(--size-600) * 2) var(--size-400) var(--size-400);
     z-index: 99;
     font-weight: var(--font-weight-400);
     position: relative;
     border-radius: var(--radius-400);
-    color: var(--color-text-200)
+    color: var(--color-text-200);
+    transition: var(--transition-400);
 }
 
-.notification:not(:last-child) {
-    margin-bottom: var(--size-200);
+.notification.slideIn {
+    animation-name: slideIn;
+    animation-duration: 0.15s;
+    animation-timing-function: ease;
+}
+
+.notification.slideOut {
+    transform: translateX(150%);
+    flex: 0;
 }
 
 .notification.notification__color-info {
@@ -40,4 +58,18 @@
     position: fixed;
     top: 16px;
     right: 16px;
+    display: flex;
+    gap: var(--size-200);
+    flex-direction: column;
+    z-index: 99;
+}
+
+.notificationContainer {
+    overflow: hidden;
+    max-height: calc(var(--size-300) * 20);
+    transition: var(--transition-400);
+}
+
+.notificationContainer.shrink {
+    max-height: 0;
 }

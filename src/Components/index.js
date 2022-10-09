@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import Link from "./Link";
 import Input from "./Input";
 import Notification from "./Notification";
+import User from "./User";
 
 export {
     Button,
@@ -11,5 +12,6 @@ export {
     Icon,
     Link,
     Input,
-    Notification
+    Notification,
+    User
 }

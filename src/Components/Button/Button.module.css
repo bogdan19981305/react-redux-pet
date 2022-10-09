@@ -2,9 +2,17 @@
     --default-border-size: 2px;
 
     cursor: pointer;
+    flex-wrap: nowrap;
+    display: inline-flex;
+    gap: var(--size-300);
     border-radius: var(--radius-400);
     transition: var(--transition-400);
     width: fit-content;
+}
+
+.button__color-accent {
+    background: var(--color-button-accent);
+    color: var(--color-text-100);
 }
 
 .button__color-primary {
@@ -16,11 +24,6 @@
 
     background: transparent;
     color: var(--color);
-}
-
-.button__color-accent {
-    background: var(--color-button-accent);
-    color: var(--color-text-100);
 }
 
 .button__type-primary {
@@ -36,7 +39,8 @@
 
 
 .button__type-solid {
-    border: var(--default-border-size) solid var(--color-button-primary);
+    border: var(--default-border-size) solid;
+    border-color: var(--color-button-primary);
 }
 
 .button__type-solid:where(:hover,:focus-within) {
@@ -60,4 +64,21 @@
 .button__size-large {
     padding: var(--size-700) var(--size-600);
     font-size: var(--font-size-700);
+}
+
+.button__size-extraSmall {
+    padding: var(--size-300) var(--size-600);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-300);
+}
+
+.button__color-glow {
+    border-color: transparent;
+    background: var(--color-button-glow);
+    color: var(--color-text-200);
+}
+
+.button__color-glow:where(:hover,:focus-within) {
+    background: var(--color-button-primary);
+    color: var(--color-text-900);
 }

@@ -19,6 +19,11 @@ const messages = {
         regex_not_match_uppercase: 'Password must contain 1 uppercase symbol',
         regex_not_match_lowercase: 'Password must contain 1 lowercase symbol',
         regex_not_match_special_character: 'Password must contain 1 special character',
+    },
+    auth: {
+        not_found: 'User not found',
+        invalid_pass: 'Invalid password',
+        logged_in: 'Log in success'
     }
 };
 

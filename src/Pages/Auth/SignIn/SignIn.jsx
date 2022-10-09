@@ -6,20 +6,26 @@ import validationSchema from "Validators";
 import {AuthService} from "Services";
 import {Notify} from "Services";
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 const { Item } = Form;
 
 const SignIn = () => {
 
     const users = useSelector(({users}) => users);
+    const navigate = useNavigate();
 
-    const signIn = data => AuthService.signIn({users})
-            .then(res => console.log(res));
+    const signIn = data => AuthService
+            .signIn({users,data})
+            .then(res => {
+                Notify.success(res);
+                navigate('/admin/view-site');
+            })
+            .catch(err => Notify.error(err))
 
-    const createNotification = () => Notify.info('priokol');
 
     return (
-        <div onClick={() => createNotification()} className='margin-top-xl-500'>
+        <div className='margin-top-xl-500'>
             <div className="container d-flex align-items-center direction-column">
                 <h2 className='text-center text-color-400 margin-bottom-xl-300'><b
                     className='text-color-900 text-weight-400'>Rival</b>CMS</h2>
@@ -48,7 +54,12 @@ const SignIn = () => {
                         <Button type='submit' color='accent' size='middle'>Sign in</Button>
                     </div>
                     <Link to='/auth/register'>
-                        <Button color='accent' buttonType='primary' size='middle' className='w-100'>
+                        <Button
+                            color='accent'
+                            buttonType='primary'
+                            size='middle'
+                            className='w-100 jc-items-center'
+                        >
                             Don’t have & account?
                         </Button>
                     </Link>

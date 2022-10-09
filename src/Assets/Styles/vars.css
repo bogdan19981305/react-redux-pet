@@ -2,6 +2,7 @@
 
     --base-rem: 10px;
 
+    --font-size-300: 0.9rem;
     --font-size-400: 1rem;
     --font-size-500: 1.25rem; /* 20px default */
     --font-size-600: 1.5rem;
@@ -51,6 +52,7 @@
 
     --color-button-primary: rgba(247, 250, 252, 1);
     --color-button-accent: rgba(42, 67, 101, 1);
+    --color-button-glow: rgba(237, 100, 166, 1);
 
     --link-hover-color: var(--color-text-900);
     --main-color: rgba(247, 250, 252, 1);

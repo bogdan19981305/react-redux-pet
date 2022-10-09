@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect,useState} from "react";
 import {Icon} from "Components";
 import styles from "./Notification.module.css";
 import createContainer from "./crreateContainer";
@@ -13,31 +13,50 @@ const notificationColorStrategy = {
 }
 
 const  Notification = ({ color = 'info',id, children }) => {
+
+    const [isClosing, setIsClosing] = useState(false);
+
     const dispatch = useDispatch();
     const container = createContainer();
 
     const removeNotification = () => dispatch(notifyActions.removeNotification(id));
 
-
     useEffect(() => {
-        setTimeout(removeNotification,2000);
-        // eslint-disable-next-line
-    },[]);
+        const initialTimeOut = setTimeout(() => setIsClosing(true),3000);
+        if (isClosing) {
+            clearTimeout(initialTimeOut);
+            const removeTimeOut = setTimeout(removeNotification,300);
 
+            return () => clearTimeout(removeTimeOut);
+        }
+        // eslint-disable-next-line
+    },[isClosing]);
 
 
     return createPortal(
         <div
             className={`
-                ${styles.notification}
-                ${notificationColorStrategy[color]}
+                ${styles['notificationContainer']}
+                ${isClosing ? styles.shrink : ''}
             `}
         >
-            {children}
-            <button onClick={() => dispatch(notifyActions.removeNotification(id))} className={styles.closeButton}>
-                <Icon icon='close' />
-            </button>
-        </div>,
+            <div
+                className={`
+                ${styles.notification}
+                ${notificationColorStrategy[color]}
+                ${!isClosing ? styles.slideIn : styles.slideOut}
+            `}
+            >
+                {children}
+                <button
+                    onClick={() => setIsClosing(true)}
+                    className={styles.closeButton}
+                >
+                    <Icon icon='close' />
+                </button>
+            </div>
+        </div>
+        ,
         container
     );
 }

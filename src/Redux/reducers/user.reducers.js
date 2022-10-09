@@ -1,6 +1,10 @@
 import constants from '../constants';
 
-const initialState = []
+const initialState = [{
+    fullName:"Bogdan Lytvynenko",
+    email:"litvinenkob16@gmail.com",
+    password:"111111111Qq#"
+}]
 
 
 const userReducers = (state = initialState, {type,payload}) => {
