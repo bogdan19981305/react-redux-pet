@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Aside.module.css';
+// import styles from './Aside.module.css';
 
 const Aside = () => (
     <h2>Aside</h2>
