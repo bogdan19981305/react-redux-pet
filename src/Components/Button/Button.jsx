@@ -7,7 +7,8 @@ const buttonColorStrategy = {
 }
 
 const buttonTypeStrategy = {
-    solid: styles['button__type-solid']
+    solid: styles['button__type-solid'],
+    primary: styles['button__type-primary']
 }
 
 const buttonSizeStrategy = {

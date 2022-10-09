@@ -4,6 +4,9 @@
     width: 100%;
 }
 
+.w-100 {
+    width: 100%;
+}
 
 .d-flex {
     display: flex;
@@ -58,6 +61,10 @@
     padding-bottom: var(--size-xl-300);
 }
 
+.padding-bottom-xl-500 {
+    padding-bottom: var(--size-xl-500);
+}
+
 .margin-bottom-500 {
     margin-bottom: var(--size-500);
 }
@@ -68,4 +75,8 @@
 
 .margin-bottom-xl-500 {
     margin-bottom: var(--size-xl-500);
+}
+
+.margin-top-xl-500 {
+    margin-top: var(--size-xl-500);
 }

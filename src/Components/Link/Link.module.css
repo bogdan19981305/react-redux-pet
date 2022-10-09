@@ -1,10 +1,17 @@
 .link {
-    color: var(--color-text-200);
     font-size: var(--font-size-500);
     font-weight: var(--font-weight-400);
     line-height: var(--font-size-600);
     text-decoration: none;
     transition: var(--transition-400);
+}
+
+.link__color-white {
+    color: var(--color-text-200);
+}
+
+.link__color-blue {
+    color: var(--color-text-600);
 }
 
 .link:where(:hover,:focus-within) {

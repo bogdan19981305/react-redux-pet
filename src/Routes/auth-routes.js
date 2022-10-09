@@ -1,5 +1,6 @@
 import Auth from "Layouts/Auth";
 import Register from "Pages/Auth/Register";
+import SignIn from "Pages/Auth/SignIn";
 
 const authRoutes =  {
     path: "/auth",
@@ -7,7 +8,7 @@ const authRoutes =  {
     children: [
         {
             path: '/auth/sign-in',
-            element: <div>sign in</div>,
+            element: <SignIn />,
             index: true
         },
         {

@@ -23,6 +23,17 @@
     color: var(--color-text-100);
 }
 
+.button__type-primary {
+    background: transparent;
+    color: var(--color-text-900);
+}
+
+.button__type-primary:where(:hover,:focus-within){
+    background: var(--color-button-accent);
+    color: var(--color-text-200);
+    border-color: transparent;
+}
+
 
 .button__type-solid {
     border: var(--default-border-size) solid var(--color-button-primary);

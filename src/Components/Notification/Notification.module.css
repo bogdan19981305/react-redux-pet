@@ -1,0 +1,43 @@
+.notification {
+    max-width: 430px;
+    max-height: 200px;
+    overflow: hidden;
+    padding: 14px 48px 12px 12px;
+    z-index: 99;
+    font-weight: var(--font-weight-400);
+    position: relative;
+    border-radius: var(--radius-400);
+    color: var(--color-text-200)
+}
+
+.notification:not(:last-child) {
+    margin-bottom: var(--size-200);
+}
+
+.notification.notification__color-info {
+    background-color: var(--color-bg-500);
+}
+
+.notification.notification__color-success {
+    background-color: var(--color-success-400);
+}
+
+.notification.notification__color-error {
+    background-color: var(--color-error-400);
+}
+
+.notification .closeButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}

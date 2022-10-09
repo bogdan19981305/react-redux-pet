@@ -1,8 +1,12 @@
 import {combineReducers} from "redux";
-import authActions from "./authActions";
+import authReducers from "./auth.reducers";
+import userReducers from "./user.reducers";
+import notifyReducers from "./notifications.reducers";
 
 const rootReducer = combineReducers({
-    auth: authActions
+    auth: authReducers,
+    users: userReducers,
+    notifications: notifyReducers
 });
 
 export default rootReducer;

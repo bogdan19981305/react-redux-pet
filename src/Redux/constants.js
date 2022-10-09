@@ -1,0 +1,7 @@
+const constants = {
+    ADD_NEW_USER: 'ADD_NEW_USER',
+    ADD_NEW_NOTIFICATION: 'ADD_NEW_NOTIFICATION',
+    REMOVE_NOTIFICATION: 'REMOVE_NOTIFICATION'
+};
+
+export default constants;
