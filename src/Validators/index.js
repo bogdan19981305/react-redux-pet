@@ -1,6 +1,3 @@
-import * as Yup from 'yup';
+import formSchemas from './Forms';
 
-const validationSchema = Yup.object().shape({
-    email: Yup.string().email().required("Email is required"),
-});
-export default validationSchema;
+export default formSchemas;

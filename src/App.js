@@ -5,7 +5,13 @@ import './styles.css';
 import 'Assets/Styles/reset.css';
 import 'Assets/Styles/utility.css';
 import 'Assets/Styles/typography.css';
+import { Provider } from 'react-redux'
+import store from "Redux/index";
 
-const App = () => useRoutes(routes);
+const App = () => (
+    <Provider store={store}>
+        {useRoutes(routes)}
+    </Provider>
+)
 
 export default App;

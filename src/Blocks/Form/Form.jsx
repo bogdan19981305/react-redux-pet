@@ -2,7 +2,6 @@ import React from "react";
 import {Item} from "./common";
 import styles from './Form.module.css';
 import { Form,Formik } from 'formik';
-import validationSchema from "Validators";
 
 const FormComponent = ({
     children,
@@ -15,7 +14,6 @@ const FormComponent = ({
         <Formik
             initialValues={initialValues}
             onSubmit={onSubmit}
-            validationSchema={validationSchema}
             {...props}
         >
             <Form

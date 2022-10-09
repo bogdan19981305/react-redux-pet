@@ -1,6 +1,14 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
+import {connect} from "react-redux";
 
-const Auth = () => <Outlet />
+const Auth = (props) => {
 
-export default Auth;
+    console.log(props);
+
+    return (
+        <Outlet />
+        )
+}
+
+export default connect((data => ({data})))(Auth);

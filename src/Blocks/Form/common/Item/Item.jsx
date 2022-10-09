@@ -3,7 +3,7 @@ import {Icon,Input} from "Components";
 import styles from './Item.module.css';
 import {useField} from "formik";
 
-const Item = ({label,icon,inputType,...props}) => {
+const Item = ({label,autocomplete = '',icon,inputType,...props}) => {
 
     const [field,meta] = useField(props);
 
@@ -11,7 +11,8 @@ const Item = ({label,icon,inputType,...props}) => {
     const checkedClassName = (!meta.error && meta.touched) ? styles['item__checked'] : null
 
     const fieldInputStrategy = {
-        text: <Input className={`${errorClassName} ${checkedClassName}`} {...field} />
+        text: <Input autoComplete={autocomplete} className={`${errorClassName} ${checkedClassName}`} {...field} />,
+        password: <Input autoComplete={autocomplete} type='password' className={`${errorClassName} ${checkedClassName}`} {...field} />
     }
 
     return (

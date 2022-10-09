@@ -3,6 +3,7 @@ import Header from "Layouts/Header";
 import {Button, Link, Logo} from "Components";
 import Form from "Blocks/Form";
 import styles from './Register.module.css';
+import validationSchema from "Validators";
 
 const { Item } = Form;
 
@@ -19,6 +20,7 @@ const Register = () => (
             <Form
                 className={`${styles.form} align-items-end`}
                 initialValues={{fullName: '',email: '',password: ''}}
+                validationSchema={validationSchema.signUpForm}
             >
                 <Item
                     inputType='text'
@@ -26,20 +28,23 @@ const Register = () => (
                     name='fullName'
                     icon='user'
                     required
+                    autocomplete='full name'
                 />
                 <Item
                     inputType='text'
                     label='Email address'
                     name='email'
                     icon='mail'
+                    autocomplete='email'
                 />
                 <Item
-                    inputType='text'
+                    inputType='password'
                     label='Password'
                     name='password'
                     icon='lock'
+                    autocomplete='new-password'
                 />
-                <Button color='accent' size='middle'>Register</Button>
+                <Button type='submit' color='accent' size='middle'>Register</Button>
             </Form>
         </div>
     </div>
